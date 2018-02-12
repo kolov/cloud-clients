@@ -47,7 +47,7 @@ RUN wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud
 RUN \
     mkdir aws && \
     virtualenv aws/env && \
-    ./aws/env/bin/pip install awscli && \
+    ./aws/env/bin/pip install awscli traceback2 && \
     echo 'source $HOME/aws/env/bin/activate' >> .bashrc && \
     echo 'complete -C aws_completer aws' >> .bashrc
 
